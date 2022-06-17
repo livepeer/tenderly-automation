@@ -9,13 +9,13 @@ export const triggerCache: ActionFn = async (
   // rpc key should include full URL eg:
   // infura key for mainnet: https://mainnet.infura.io/v3/<infura key>
   // or alchemy https://arb-rinkeby.g.alchemy.com/v2/<alchemy key>
-  const rpcL1 = await context.secrets.get('RPC_KEY_ETH_TEST');
-  const rpcL2 = await context.secrets.get('RPC_KEY_ARB_TEST');
+  const rpcL1 = await context.secrets.get('RPC_KEY_ETH');
+  const rpcL2 = await context.secrets.get('RPC_KEY_ARB');
 
   const ethProvider = new ethers.providers.JsonRpcProvider(rpcL1);
   const arbProvider = new ethers.providers.JsonRpcProvider(rpcL2);
 
-  const pvtKey = await context.secrets.get('PVT_KEY_SIGNER_TEST');
+  const pvtKey = await context.secrets.get('PVT_KEY_SIGNER');
   const signer = new ethers.Wallet(pvtKey, ethProvider);
 
   const cache = getCache(ethProvider);

@@ -1,0 +1,4 @@
+export const L1LPTDataCacheAddress =
+  '0xD218f6eA99907C2EDB889A151DF326aCd0F70D88';
+export const L2LPTDataCacheAddress =
+  '0xd348394B6Fa2F698eC6A26352390663047735388';

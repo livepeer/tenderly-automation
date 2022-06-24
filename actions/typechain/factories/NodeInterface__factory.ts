@@ -30,11 +30,6 @@ const _abi = [
         type: "uint256",
       },
       {
-        internalType: "uint256",
-        name: "maxSubmissionCost",
-        type: "uint256",
-      },
-      {
         internalType: "address",
         name: "excessFeeRefundAddress",
         type: "address",
@@ -43,16 +38,6 @@ const _abi = [
         internalType: "address",
         name: "callValueRefundAddress",
         type: "address",
-      },
-      {
-        internalType: "uint256",
-        name: "maxGas",
-        type: "uint256",
-      },
-      {
-        internalType: "uint256",
-        name: "gasPriceBid",
-        type: "uint256",
       },
       {
         internalType: "bytes",

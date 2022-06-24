@@ -4,7 +4,7 @@ actions:
     runtime: v1
     sources: actions
     specs:
-      CacheWhenL1LPTMintedTest:
+      CacheWhenL1LPTMintedTestNitro:
         description: Calls cacheTotalSupply on L1DataCache contract once Mint event is emitted
         function: cacheLPTTotalSupply/index:triggerCache
         trigger:
@@ -13,13 +13,13 @@ actions:
             filters:
               - eventEmitted:
                   contract:
-                    address: 0xEf5F154eb0261CB0331a28BC0fB60CA73E716617
+                    address: 0x9E5403486780c37F6Fe9c47d17Af6151e27fE8a5
                   name: Mint
               - eventEmitted:
                   contract:
-                    address: 0xEf5F154eb0261CB0331a28BC0fB60CA73E716617
+                    address: 0x9E5403486780c37F6Fe9c47d17Af6151e27fE8a5
                   name: Burn
-                network: 4
+                network: 5
             status:
               - mined
 project_slug: 'LivepeerOnchainCronTest'

@@ -20,7 +20,7 @@ import type { TypedEventFilter, TypedEvent, TypedListener } from "./common";
 
 interface NodeInterfaceInterface extends ethers.utils.Interface {
   functions: {
-    "estimateRetryableTicket(address,uint256,address,uint256,uint256,address,address,uint256,uint256,bytes)": FunctionFragment;
+    "estimateRetryableTicket(address,uint256,address,uint256,address,address,bytes)": FunctionFragment;
     "lookupMessageBatchProof(uint256,uint64)": FunctionFragment;
   };
 
@@ -31,11 +31,8 @@ interface NodeInterfaceInterface extends ethers.utils.Interface {
       BigNumberish,
       string,
       BigNumberish,
-      BigNumberish,
       string,
       string,
-      BigNumberish,
-      BigNumberish,
       BytesLike
     ]
   ): string;
@@ -105,11 +102,8 @@ export class NodeInterface extends BaseContract {
       deposit: BigNumberish,
       destAddr: string,
       l2CallValue: BigNumberish,
-      maxSubmissionCost: BigNumberish,
       excessFeeRefundAddress: string,
       callValueRefundAddress: string,
-      maxGas: BigNumberish,
-      gasPriceBid: BigNumberish,
       data: BytesLike,
       overrides?: CallOverrides
     ): Promise<[BigNumber, BigNumber]>;
@@ -148,11 +142,8 @@ export class NodeInterface extends BaseContract {
     deposit: BigNumberish,
     destAddr: string,
     l2CallValue: BigNumberish,
-    maxSubmissionCost: BigNumberish,
     excessFeeRefundAddress: string,
     callValueRefundAddress: string,
-    maxGas: BigNumberish,
-    gasPriceBid: BigNumberish,
     data: BytesLike,
     overrides?: CallOverrides
   ): Promise<[BigNumber, BigNumber]>;
@@ -191,11 +182,8 @@ export class NodeInterface extends BaseContract {
       deposit: BigNumberish,
       destAddr: string,
       l2CallValue: BigNumberish,
-      maxSubmissionCost: BigNumberish,
       excessFeeRefundAddress: string,
       callValueRefundAddress: string,
-      maxGas: BigNumberish,
-      gasPriceBid: BigNumberish,
       data: BytesLike,
       overrides?: CallOverrides
     ): Promise<[BigNumber, BigNumber]>;
@@ -237,11 +225,8 @@ export class NodeInterface extends BaseContract {
       deposit: BigNumberish,
       destAddr: string,
       l2CallValue: BigNumberish,
-      maxSubmissionCost: BigNumberish,
       excessFeeRefundAddress: string,
       callValueRefundAddress: string,
-      maxGas: BigNumberish,
-      gasPriceBid: BigNumberish,
       data: BytesLike,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
@@ -259,11 +244,8 @@ export class NodeInterface extends BaseContract {
       deposit: BigNumberish,
       destAddr: string,
       l2CallValue: BigNumberish,
-      maxSubmissionCost: BigNumberish,
       excessFeeRefundAddress: string,
       callValueRefundAddress: string,
-      maxGas: BigNumberish,
-      gasPriceBid: BigNumberish,
       data: BytesLike,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;

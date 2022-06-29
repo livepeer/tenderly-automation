@@ -22,4 +22,11 @@ actions:
                 network: 1
             status:
               - mined
-project_slug: 'LivepeerOnchainCron'
+      ReportGas:
+        description: Alerts when price/gas exceeds 100gwei on arbitrum
+        function: gasTracker/index:trackGas
+        trigger:
+          type: periodic
+          periodic:
+            interval: 5m
+project_slug: 'LivepeerOnchainCronTest'

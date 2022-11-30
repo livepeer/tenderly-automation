@@ -21,7 +21,7 @@ export const triggerCache: ActionFn = async (
   const cache = getCache(ethProvider);
 
   const {maxGas, gasPriceBid, maxSubmissionCost, ethValue} =
-    await getArbParams(cache, arbProvider, signer.address);
+    await getArbParams(cache, ethProvider, arbProvider, signer.address);
 
   const tx = await cache
     .connect(signer)
